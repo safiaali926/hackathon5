@@ -1,5 +1,6 @@
 import React from "react";
 import { FaUserAlt, FaCalendarAlt } from "react-icons/fa"; // Importing icons from Font Awesome
+import Image from "next/image"; // Importing Image component from Next.js
 
 const blogPosts = [
   {
@@ -39,9 +40,17 @@ const LeatestBlog: React.FC = () => {
             className="bg-white rounded-md shadow-md p-4"
             style={{ width: "100%", height: "420px" }}
           >
-            <img src={post.imgSrc} alt={post.title} className="h-40 w-full object-cover rounded-md" />
+            <div className="relative w-full h-40">
+              <Image
+                src={post.imgSrc}
+                alt={post.title}
+                layout="fill" // Make image fill the container
+                objectFit="cover" // Ensure the image covers the container without distortion
+                className="rounded-md"
+              />
+            </div>
             <div className="mt-4">
-              <div className="text-sm  flex items-center gap-2 text-[#151875]">
+              <div className="text-sm flex items-center gap-2 text-[#151875]">
                 <FaUserAlt className="text-pink-500" />
                 <span>{post.author}</span>
                 <span>•</span>
