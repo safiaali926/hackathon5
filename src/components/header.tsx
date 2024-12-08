@@ -12,8 +12,16 @@ function Header() {
       {/* Top Bar */}
       <div className="bg-purple-600 text-white text-sm py-2 px-10 flex justify-between items-center">
         {/* Left Section */}
-        <div className="flex items-center space-x-6 mx-5">
+        <div className="flex hidden md:flex items-center items-center space-x-6 mx-5">
           {/* Removed Mail and PhoneCall for mobile */}
+          <div className="flex items-center space-x-2 ">
+            <Mail className="w-4 h-4" />
+            <span>mhhasanul@gmail.com</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <PhoneCall className="w-4 h-4" />
+            <span>(12345)67890</span>
+          </div>
         </div>
 
         {/* Right Section */}
@@ -88,12 +96,12 @@ function Header() {
               )}
             </li>
             <li>
-              <Link href="/aboutus" className="hover:text-pink-500">
-                About
+              <Link href="/errorpage" className="hover:text-pink-500">
+                Pages
               </Link>
             </li>
             <li>
-              <Link href="/errorpage" className="hover:text-pink-500">
+              <Link href="/shop" className="hover:text-pink-500">
                 Products
               </Link>
             </li>
